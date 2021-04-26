@@ -1,0 +1,102 @@
+### 链表
+
+#### 基本信息
+
+``` c++
+
+  Definition for singly-linked list.
+  struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode() : val(0), next(nullptr) {}
+      ListNode(int x) : val(x), next(nullptr) {}
+      ListNode(int x, ListNode *next) : val(x), next(next) {}
+  };
+ 
+```
+
+
+
+- 常见的包括单链表/双向链表/循环链表
+- 基本都在考察对链表的**增删改查操作**
+- 需要注意的点
+  - **双指针法**，比如快慢指针、同向、反向指针等
+  - **Dummy node**. Dummy Node 其实就是带头节点的指针
+  - **临界问题**.  考虑链表是否为空， 结尾节点next指针是否有设置为nullptr; 在遍历中往往需要考虑指针是否为空。
+
+
+
+#### 查找节点
+
+##### 环形链表
+
+> 
+
+#### 删除节点
+
+#### 链表翻转操作
+
+##### [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/)
+
+> 输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
+
+```
+输入: 1->2->3->4->5->NULL
+输出: 5->4->3->2->1->NULL
+```
+
+- 一次遍历，双指针 `prev` `cur`
+  - 记录前一个节点，修改当前节点的指针为前一个节点，完成翻转
+  - 返回最后一个节点的指针
+  - 时间复杂度O(N),空间复杂度O(1)
+
+- 关键点：` 一次遍历+双指针 `  `递归解法`
+
+1. 一次遍历+双指针 
+
+``` c++
+ListNode* reverseList(ListNode* head) {
+    
+    if(head==NULL||head->next==NULL) return head;//仅有一个元素或空
+    
+    ListNode* cur = head;
+    ListNode* prev = NULL;
+
+    while(cur){
+        ListNode*next = cur ->next;
+        cur->next =prev;
+        prev = cur;
+        cur = next;
+    }
+
+    return prev;
+}
+```
+
+
+
+2. **递归反转链表**
+
+   ![image-20210426124055276](C:\Users\ninan\AppData\Roaming\Typora\typora-user-images\image-20210426124055276.png)
+
+``` c++
+ListNode* reverseList(ListNode* head) {    
+	if(head==NULL||head->next==NULL) return head;
+
+    ListNode *p = reverseList(head->next);
+    head->next->next=head;
+    head->next=NULL;
+    return p;
+}
+```
+
+
+
+
+
+
+
+#### 链表合并
+
+#### 混合操作
+
