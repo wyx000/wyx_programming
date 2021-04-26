@@ -615,6 +615,16 @@ A(int& inputID,string& inputName,FaceImage& inputFace):id(inputID),name(inputNam
 
 详见[C++ 初始化列表](
 
+### Private，Public，Protected
+
+对于继承自己的class，base class可以认为他们都是自己的子女，而对于和自己一个目录下的classes，认为都是自己的朋友。
+1、**public：**public表明该数据成员、成员函数是对所有用户开放的，所有用户都可以直接进行调用
+2、**private：**private表示私有，私有的意思就是除了class自己之外，任何人都不可以直接使用，即便是子女，朋友，都不可以使用。
+3、**protected：**protected对于子女、朋友来说，就是public的，可以自由使用，没有任何限制，而对于其他的外部class，protected就变成private。
+![image-20210421215928156](C:\Users\ninan\AppData\Roaming\Typora\typora-user-images\image-20210421215928156.png)
+
+![image-20210421220000492](C:\Users\ninan\AppData\Roaming\Typora\typora-user-images\image-20210421220000492.png)
+
 ## **面向对象的程序设计**
 
 ### C++中的重载和重写的区别：
