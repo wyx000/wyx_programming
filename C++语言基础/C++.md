@@ -622,9 +622,9 @@ A(int& inputID,string& inputName,FaceImage& inputFace):id(inputID),name(inputNam
 1、**public：**public表明该数据成员、成员函数是对所有用户开放的，所有用户都可以直接进行调用
 2、**private：**private表示私有，私有的意思就是除了class自己之外，任何人都不可以直接使用，即便是子女，朋友，都不可以使用。
 3、**protected：**protected对于子女、朋友来说，就是public的，可以自由使用，没有任何限制，而对于其他的外部class，protected就变成private。
-![image-20210421215928156](.\pics\image-20210421215928156.png)
+<img src=".\pics\image-20210421215928156.png">
 
-![image-20210421220000492](.\pics\image-20210421220000492.png)
+<img src=".\pics\image-20210421220000492.png">
 
 ## **面向对象的程序设计**
 
@@ -699,7 +699,7 @@ C++的虚函数是实现多态的机制。它是通过虚函数表实现的，�
 
 定义纯虚函数是为了实现一个**接口**，起到一个规范的作用，规范继承这个类的程序员必须实现这个函数。
 
-![image-20210418140004929](.\pics\image-20210418140004929.png?lastModify=1619446046)
+<img src=".\pics\image-20210418140004929.png?lastModify=1619446046">
 
 ###  介绍C++所有的构造函数
 
